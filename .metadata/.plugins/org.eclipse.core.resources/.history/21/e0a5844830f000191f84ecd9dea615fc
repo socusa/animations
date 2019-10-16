@@ -35,7 +35,7 @@ public class MyFrame extends JFrame {
 		add(drawingPanel = new DrawingPanel(500,400));
 		add(controlPanel = new ControlPanel());
 		
-		controlPanel.setPreferredSize(new Dimension(500,120));
+		controlPanel.setPreferredSize(new Dimension(500,100));
 	}
 	
 	public static void main(String[] args) {

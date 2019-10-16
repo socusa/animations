@@ -61,8 +61,6 @@ public class ControlPanel extends JPanel {
 		add(fonts = new JComboBox<String>(fontFamilyNames));
 		
 		fonts.setFont(font);
-		
-		fonts.addItemListener(listener);
 	}
 
 }

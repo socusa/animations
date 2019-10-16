@@ -35,7 +35,7 @@ public class MyFrame extends JFrame {
 		add(drawingPanel = new DrawingPanel(500,400));
 		add(controlPanel = new ControlPanel());
 		
-		controlPanel.setPreferredSize(new Dimension(500,120));
+		controlPanel.setPreferredSize(new Dimension(500,100));
 	}
 	
 	public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class MyFrame extends JFrame {
 		
 		myFrame.setResizable(false);
 		
-		myFrame.setSize(530,600);
+		myFrame.setSize(530,560);
 		myFrame.setLocationRelativeTo(null);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);

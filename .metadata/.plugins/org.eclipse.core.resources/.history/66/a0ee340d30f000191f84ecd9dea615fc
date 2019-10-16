@@ -7,7 +7,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -21,7 +20,6 @@ public class MyFrame extends JFrame {
 	protected static Font font;
 	protected static JRadioButton shape;
 	protected static JRadioButton words;
-	protected static JComboBox<String> fonts;
 	
 	public MyFrame(String title) {
 		super(title);
@@ -35,7 +33,7 @@ public class MyFrame extends JFrame {
 		add(drawingPanel = new DrawingPanel(500,400));
 		add(controlPanel = new ControlPanel());
 		
-		controlPanel.setPreferredSize(new Dimension(500,120));
+		controlPanel.setPreferredSize(new Dimension(500,100));
 	}
 	
 	public static void main(String[] args) {
@@ -45,7 +43,7 @@ public class MyFrame extends JFrame {
 		
 		myFrame.setResizable(false);
 		
-		myFrame.setSize(530,600);
+		myFrame.setSize(530,530);
 		myFrame.setLocationRelativeTo(null);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);
