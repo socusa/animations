@@ -1,0 +1,47 @@
+package animations;
+
+import java.awt.Graphics;
+
+public class Shape {
+	private int startx;
+	private int starty;
+	
+	public Shape(int startx,
+			     int starty) {
+		this.startx = startx;
+		this.starty = starty;
+	}
+	
+	public void drawHeadAndBody(Graphics g) {
+		g.drawOval(startx - 50,starty,100,100);
+		
+		g.drawLine(startx,starty + 100,startx,starty + 200);
+	}
+	
+	public void drawLeftArm(Graphics g,
+			                boolean up) {
+		if (up)
+   		   g.drawLine(startx, starty + 140, startx - 50, starty + 130);
+		else
+		   g.drawLine(startx, starty + 140, startx -50, starty + 150 );
+	}
+
+	public void drawRightArm(Graphics g,
+			                 boolean up) {
+		if (up)
+   		   g.drawLine(startx, starty + 140, startx + 50, starty + 130);
+		else
+		   g.drawLine(startx, starty + 140, startx + 50, starty + 150 );
+	}
+	
+	public void draw(Graphics g) {
+		drawHeadAndBody(g);
+		
+		drawLeftArm(g,false);
+		
+		drawRightArm(g,true);
+	}
+	
+	
+
+}

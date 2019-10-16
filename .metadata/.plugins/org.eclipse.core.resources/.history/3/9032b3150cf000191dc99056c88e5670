@@ -1,0 +1,47 @@
+package animations;
+
+import java.awt.Graphics;
+
+public class Animator implements Runnable {
+	protected boolean keepGoing;
+	protected Thread thread;
+	protected double delay;
+	protected DrawingPanel drawingPanel;
+	
+	public Animator(DrawingPanel drawingPanel){
+		this.drawingPanel = drawingPanel;
+		
+		keepGoing = true;
+		
+		thread = new Thread(this);
+		
+		delay = 1;
+		
+		thread.start();
+	}
+	
+	protected void pause(double seconds) {
+		try {
+			Thread.sleep((int)(seconds*1000));
+		} catch (InterruptedException ie) {
+			System.out.println(ie);
+		}
+	}
+	
+	protected void draw() {
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		while (keepGoing) {
+			pause(delay);
+			
+			draw();
+		}
+
+	}
+
+}

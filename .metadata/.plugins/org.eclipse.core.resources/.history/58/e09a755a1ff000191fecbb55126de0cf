@@ -1,0 +1,24 @@
+package animations;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JPanel;
+
+import static animations.MyFrame.*;
+
+public class ControlPanel extends JPanel {
+	
+	public ControlPanel() {
+		create = new JButton("Create");
+		animate = new JButton("Animate");
+		
+		add(create);
+		add(animate);
+		
+		create.addActionListener(listener);
+		animate.addActionListener(listener);
+		
+		add(box = new JCheckBox("Shape"));
+	}
+
+}

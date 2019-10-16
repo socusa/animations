@@ -1,0 +1,27 @@
+package animations;
+
+import java.awt.Graphics;
+
+public class Shape {
+	private int startx;
+	private int starty;
+	
+	public Shape(int startx,
+			     int starty) {
+		this.startx = startx;
+		this.starty = starty;
+	}
+	
+	public void drawHeadAndBody(Graphics g) {
+		g.drawOval(startx - 50,starty,100,100);
+		
+		g.drawLine(startx,starty + 100,startx,starty + 200);
+	}
+	
+	public void draw(Graphics g) {
+		drawHeadAndBody(g);
+	}
+	
+	
+
+}

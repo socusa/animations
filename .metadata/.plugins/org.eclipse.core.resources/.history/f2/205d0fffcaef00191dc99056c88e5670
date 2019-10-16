@@ -1,0 +1,32 @@
+package animations;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import javax.swing.JPanel;
+
+import static animations.MyFrame.*;
+
+public class DrawingPanel extends JPanel {
+	Shape shape;
+	
+	public DrawingPanel() {
+		shape = new Shape(100,50);
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		g.setColor(Color.black);
+		
+		g.fillRect(0, 0, getWidth(), getHeight());
+		
+		g.setColor(Color.white);
+		
+		shape.draw(g);
+		
+		
+	}
+
+	
+}

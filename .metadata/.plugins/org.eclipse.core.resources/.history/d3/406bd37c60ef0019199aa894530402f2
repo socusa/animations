@@ -1,0 +1,9 @@
+package animations;
+
+import javax.swing.JPanel;
+
+import static animations.MyFrame.*;
+
+public class ControlPanel extends JPanel {
+
+}

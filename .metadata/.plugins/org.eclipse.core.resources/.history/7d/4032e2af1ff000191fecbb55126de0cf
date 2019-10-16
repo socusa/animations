@@ -1,0 +1,38 @@
+package animations;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import static animations.MyFrame.*;
+
+import java.awt.Dimension;
+
+public class ControlPanel extends JPanel {
+	
+	public ControlPanel() {
+		create = new JButton("Create");
+		animate = new JButton("Animate");
+		
+		add(create);
+		add(animate);
+		
+		create.addActionListener(listener);
+		animate.addActionListener(listener);
+		
+		add(box = new JCheckBox("Shape"));
+		
+		box.addItemListener(listener);
+		
+		add(new JLabel("Delay in milliseconds"));
+		
+		add(delay = new JTextField());
+		
+		delay.setPreferredSize(new Dimension(100,50));
+		
+		delay.setText("1000");
+	}
+
+}

@@ -1,0 +1,15 @@
+package animations;
+
+public class LeftArmAnimator extends Animator {
+    
+    public LeftArmAnimator(DrawingPanel drawingPanel) {
+    	super(drawingPanel);
+    }
+    
+	public void draw() {
+		drawingPanel.getShape().changeLeftArm();
+		
+		drawingPanel.repaint();
+	}
+
+}

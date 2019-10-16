@@ -1,0 +1,16 @@
+package animations;
+
+public class LeftArmAnimator extends Animator {
+    protected Shape shape;
+    
+    public LeftArmAnimator(DrawingPanel drawingPanel) {
+    	super(drawingPanel);
+    }
+    
+	public void draw() {
+		drawingPanel.getShape().changeLeftArm();
+		
+		System.out.println("Hello");
+	}
+
+}

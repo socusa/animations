@@ -1,0 +1,42 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+	protected DrawingPanel drawingPanel;
+	protected ControlPanel controlPanel;
+	protected static JButton create;
+	protected static JButton animate;
+	protected static MyListener listener;
+	
+	public MyFrame(String title) {
+		super(title);
+		
+		setLayout(new FlowLayout());
+		
+		add(drawingPanel = new DrawingPanel());
+		add(controlPanel = new ControlPanel());
+		
+		drawingPanel.setPreferredSize(new Dimension(500,400));
+		controlPanel.setPreferredSize(new Dimension(500,100));
+		
+		listener = new MyListener();
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MyFrame myFrame = new MyFrame("My Frame");
+		
+		myFrame.setSize(530,530);
+		myFrame.setLocationRelativeTo(null);
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(true);
+	}
+
+}

@@ -1,0 +1,16 @@
+package animations;
+
+public class WordAnimator extends Animator {
+
+	public WordAnimator(DrawingPanel drawingPanel) {
+		super(drawingPanel);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void draw() {
+		drawingPanel.startx -= 10;
+		
+		drawingPanel.repaint();
+	}
+
+}

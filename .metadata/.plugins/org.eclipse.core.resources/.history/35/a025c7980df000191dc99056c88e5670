@@ -1,0 +1,26 @@
+package animations;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import static animations.MyFrame.*;
+
+public class MyListener implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		if (e.getSource() == animate) {
+			if (box.isSelected()) {
+			   LeftArmAnimator leftArmAnimator = new LeftArmAnimator(drawingPanel);
+			
+			   System.out.println("Hello");
+			
+			   leftArmAnimator.start();
+			}
+		}
+
+	}
+
+}
